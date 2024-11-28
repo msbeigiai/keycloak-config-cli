@@ -19,3 +19,6 @@ release.properties
 
 /*.json
 /test*
+
+# vscode
+.vscode/
