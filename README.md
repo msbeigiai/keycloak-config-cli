@@ -23,7 +23,7 @@
 
 # keycloak-config-cli
 
-keycloak-config-cli is a Keycloak utility to ensure the desired configuration state for a realm based on a JSON/YAML file. The format of the JSON/YAML file based on the export realm format. Store and handle the configuration files inside git just like normal code. A Keycloak restart isn't required to apply the configuration.
+keycloak-config-cli is a Keycloak utility to ensure the desired configuration state for a realm based on a JSON/YAML file. The format of the JSON/YAML file based on the export realm format. Store and handle the configuration files inside git just like normal code. To update or insert configurations into a running Keycloak instance, the instance typically needs to be stopped before applying the changes. However, when using keycloak-config-cli, a Keycloak restart is not required, as the tool allows configurations to be applied dynamically.
 
 # Config files
 
