@@ -138,6 +138,17 @@ public class RealmImportService {
         this.stateService = stateService;
     }
 
+    /**
+     * Imports a realm into the Keycloak by either creating a new realm or updating an existing one.
+     *
+     * <p>This method first checks if a realm with the name specified in the given {@code realmImport} 
+     * already exists in the repository. If the realm exists, it updates the realm using the data provided 
+     * in {@code realmImport}, but only if updates are necessary. If the realm does not exist, it creates 
+     * a new realm with the provided data.</p>
+     *
+     * @param realmImport the object containing the realm data to be imported. 
+     *                    Must include the name of the realm and any associated configuration or settings.
+     */
     public void doImport(RealmImport realmImport) {
         boolean realmExists = realmRepository.exists(realmImport.getRealm());
 
